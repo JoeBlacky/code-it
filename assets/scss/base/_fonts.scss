@@ -1,0 +1,18 @@
+/* Primary Font ============================================================= */
+	@font-face {
+		font-family: 'Arimo';
+			src: url("../fonts/primary-font/arimo-regular-webfont.woff") format("woff"),
+					 url("../fonts/primary-font/arimo-regular-webfont.woff2") format("woff2");
+		font-weight: normal;
+		font-style: normal;
+	}
+/* Icons Font =============================================================== */
+	@font-face {
+		font-family: 'Icomoon';
+			src: url("../fonts/icons-font/icomoon.woff") format("woff"),
+					 url("../fonts/icons-font/icomoon.ttf") format("truetype"),
+					 url("../fonts/icons-font/icomoon.svg") format("svg");
+		font-weight: normal;
+		font-style: normal;
+	}
+/* ========================================================================== */

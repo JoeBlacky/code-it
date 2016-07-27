@@ -1,0 +1,16 @@
+	$headerNav: '.header-nav';
+/* ========================================================================== */
+	#{$headerNav}{
+		padding: 33px 0 30px;
+		background: $themeColor;
+		color: #FFF;
+		#{$navLink}{
+			border-left: 1px solid #424757;
+			line-height: 16px;
+			padding: 0 4.489795918367347%;
+			&:first-child{
+				border: 0;
+			}
+		}
+	}
+/* ========================================================================== */

@@ -1,0 +1,71 @@
+%hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+%visible{
+	opacity: 1;
+	visibility: visible;
+}
+%button{
+	height: 36px;
+	padding: 10px 19px;
+	border: 1px solid $themeColor;
+	background: $themeColor;
+	color: #FFF;
+	font: 15px/16px $primaryFont;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-align: center;
+	transition:
+		color $fastSpeed linear,
+		background $fastSpeed linear;
+	&:hover{
+		background: transparent;
+		color: $themeColor;
+	}
+}
+%link{
+	position: relative;
+	&::before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		height: 1px;
+		background: #FFF;
+		transition:
+			transform $fastSpeed linear;
+		transform: scale(0);
+	}
+}
+#{$notHandheld}{
+	%link{
+		&:hover{
+			&::before{
+				transform: scale(1);
+			}
+		}
+	}
+}
+%smallHeadline{
+	letter-spacing: 1.75px;
+	font: 700 14px/16px $primaryFont;
+	text-transform: uppercase;
+}
+%sectionTitle{
+	margin: 0 0 30px;
+	color: #2F2F2F;
+	font: 900 44px/1.136363636 $primaryFont;
+	letter-spacing: -0.24px;
+}
+%smallTitle{
+	font: 600 12px/14px $primaryFont;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+%pageTitle{
+	font-size: 44px;
+	line-height: 50px;
+	text-align: center;
+}

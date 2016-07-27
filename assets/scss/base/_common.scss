@@ -1,0 +1,50 @@
+	$siteHeader: '.header';
+/* Common =================================================================== */
+	body{
+		font: 400 16px/28px $primaryFont;
+		margin: 0;
+		color: $textColor;
+	}
+	a{
+		transition: color $fastSpeed linear;
+	}
+/* Headings ================================================================= */
+	h1{
+		font: 900 64px/1.0625 $primaryFont;
+	}
+/* ========================================================================== */
+	p{
+		margin: 0 0 20px;
+	}
+	.flex{
+		@include flexbox;
+	}
+	.page{
+		min-height: 100vh;
+		min-width: $minWidth;
+  	flex-direction: column;
+  	align-items: stretch;
+	}
+	.mw{
+		width: 100%;
+		max-width: $mainWidth + $mobileSpacing*2;
+		margin: 0 auto;
+		padding-left: $mobileSpacing;
+		padding-right: $mobileSpacing;
+	}
+	.zombie{
+		display: none;
+	}
+	.contact-link{
+		display: block;
+		margin: 5px 0;
+		line-height: 20px;
+		letter-spacing: .8px;
+		&::before{
+			background: $textColor;
+		}
+	}
+	.link{
+		@extend %link;
+	}
+/* ========================================================================== */

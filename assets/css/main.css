@@ -1,0 +1,326 @@
+/* Colors =================================================================== */
+/* Fonts ==================================================================== */
+/* Transition Speed ========================================================= */
+/* Not Handheld ============================================================= */
+/* Images =================================================================== */
+/* Icons ==================================================================== */
+/* Grid Variables =========================================================== */
+/* Indents and Widths ======================================================= */
+/* Variables ================================================================ */
+/* Buttons Width ============================================================ */
+/* ========================================================================== */
+/* Reset ==================================================================== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, var,
+b, i, a,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, a,
+input, select, textarea, hr, button {
+  vertical-align: bottom;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  outline: none; }
+  a:link, a:visited, a:active {
+    outline: none; }
+
+b {
+  font-weight: 700; }
+
+ins {
+  background-color: #FF9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #FF9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px; }
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto; }
+
+address {
+  font-style: normal; }
+
+dd,
+dl {
+  margin: 0; }
+
+/* Forms ==================================================================== */
+input,
+select,
+textarea {
+  width: 100%;
+  display: block;
+  outline: none;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+textarea {
+  resize: none;
+  transition: border-color 0.2s ease-in; }
+
+/* ========================================================================== */
+/* Primary Font ============================================================= */
+@font-face {
+  font-family: 'Arimo';
+  src: url("../fonts/primary-font/arimo-regular-webfont.woff") format("woff"), url("../fonts/primary-font/arimo-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+/* Icons Font =============================================================== */
+@font-face {
+  font-family: 'Icomoon';
+  src: url("../fonts/icons-font/icomoon.woff") format("woff"), url("../fonts/icons-font/icomoon.ttf") format("truetype"), url("../fonts/icons-font/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* ========================================================================== */
+input[type="submit"], .btn {
+  height: 36px;
+  padding: 10px 19px;
+  border: 1px solid #282C37;
+  background: #282C37;
+  color: #FFF;
+  font: 15px/16px "Arimo", sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 0.2s linear, background 0.2s linear; }
+  input[type="submit"]:hover, .btn:hover {
+    background: transparent;
+    color: #282C37; }
+
+.link {
+  position: relative; }
+  .link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 1px;
+    background: #FFF;
+    transition: transform 0.2s linear;
+    transform: scale(0); }
+
+.not-handheld .link:hover::before {
+  transform: scale(1); }
+
+label {
+  font: 600 12px/14px "Arimo", sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1); }
+  25% {
+    transform: scale(1.4); }
+  50% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: scale(1); }
+  25% {
+    transform: scale(1.4); }
+  50% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+@keyframes scaleDown {
+  0% {
+    transform: scale(0.6); }
+  25% {
+    transform: scale(1.2); }
+  50% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+@-webkit-keyframes scaleDown {
+  0% {
+    transform: scale(0.6); }
+  25% {
+    transform: scale(1.2); }
+  50% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+label {
+  display: inline-block;
+  margin: 0 0 9px;
+  color: #747E80;
+  cursor: pointer; }
+
+input,
+select,
+textarea {
+  padding: 16px 38px;
+  border: 1px solid #F3F3F3;
+  background: #F3F3F3;
+  border-radius: 40px;
+  font: 500 14px/16px "Arimo", sans-serif;
+  color: #303234;
+  transition: border 0.2s linear; }
+
+input,
+select {
+  height: 50px; }
+
+input:not([type="submit"]):focus,
+textarea:focus {
+  border-color: #282C37; }
+
+textarea {
+  height: 100px;
+  border-radius: 15px;
+  resize: none; }
+
+span[role="alert"] {
+  font-size: 12px;
+  color: #DD4B39; }
+
+/* Common =================================================================== */
+body {
+  font: 400 16px/28px "Arimo", sans-serif;
+  margin: 0;
+  color: #767676; }
+
+a {
+  transition: color 0.2s linear; }
+
+/* Headings ================================================================= */
+h1 {
+  font: 900 64px/1.0625 "Arimo", sans-serif; }
+
+/* ========================================================================== */
+p {
+  margin: 0 0 20px; }
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.page {
+  min-height: 100vh;
+  min-width: 320px;
+  flex-direction: column;
+  align-items: stretch; }
+
+.mw {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.zombie {
+  display: none; }
+
+.contact-link {
+  display: block;
+  margin: 5px 0;
+  line-height: 20px;
+  letter-spacing: .8px; }
+  .contact-link::before {
+    background: #767676; }
+
+/* ========================================================================== */
+/* Header =================================================================== */
+.header {
+  background: #F7F7F7; }
+
+.info-bar {
+  padding-top: 18px;
+  padding-bottom: 21px; }
+  .info-bar .logo {
+    margin: 5px 0 0; }
+  .info-bar .contact-info {
+    padding-right: 20px; }
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+.main-nav {
+  text-transform: uppercase;
+  justify-content: center;
+  letter-spacing: .1px;
+  text-align: center; }
+  .main-nav .nav-link {
+    padding: 0 44px; }
+
+/* ========================================================================== */
+/* ========================================================================== */
+.header-nav {
+  padding: 33px 0 30px;
+  background: #282C37;
+  color: #FFF; }
+  .header-nav .nav-link {
+    border-left: 1px solid #424757;
+    line-height: 16px;
+    padding: 0 4.489795918367347%; }
+    .header-nav .nav-link:first-child {
+      border: 0; }
+
+/* ========================================================================== */
+
+/*# sourceMappingURL=main.css.map */

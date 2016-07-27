@@ -1,0 +1,13 @@
+	$mainNav: '.main-nav';
+	$navLink: '.nav-link';
+/* ========================================================================== */
+	#{$mainNav}{
+		text-transform: uppercase;
+		justify-content: center;
+		letter-spacing: .1px;
+		text-align: center;
+		#{$navLink}{
+	    padding: 0 44px;
+		}
+	}
+/* ========================================================================== */
