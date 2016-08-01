@@ -1,0 +1,33 @@
+	$categoryOutro: '.category-outro';
+/* ========================================================================== */
+	#{$categoryOutro}{
+	  padding-top: 36px;
+	  border-top: 1px solid #777;
+	  margin-top: 40px;
+	  margin-left: -10px;
+	  font-size: 14px;
+	  line-height: 22px;
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $m){
+		#{$categoryOutro}{
+			margin: 20px 0 0;
+			padding: 10px 0 0;
+			#{$col-1},
+			#{$col-2}{
+				text-align: justify;
+				padding: 10px;
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$categoryOutro}{
+			font-size: 12px;
+			#{$col-1},
+			#{$col-2}{
+				padding: 0;
+				padding-bottom: 10px;
+			}
+		}
+	}
+/* ========================================================================== */

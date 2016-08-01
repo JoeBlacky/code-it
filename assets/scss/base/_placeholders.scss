@@ -26,14 +26,14 @@
 }
 %link{
 	position: relative;
-	&::before{
+	&::after{
 		content: '';
 		position: absolute;
 		left: 0;
 		top: 100%;
 		width: 100%;
 		height: 1px;
-		background: #FFF;
+		background: $themeColor;
 		transition:
 			transform $fastSpeed linear;
 		transform: scale(0);
@@ -42,7 +42,7 @@
 #{$notHandheld}{
 	%link{
 		&:hover{
-			&::before{
+			&::after{
 				transform: scale(1);
 			}
 		}

@@ -1,48 +1,133 @@
-$validation: 'span[role="alert"]';
-
-label{
-	display: inline-block;
-	margin: 0 0 9px;
-	color: #747E80;
-	cursor: pointer;
-	@extend %smallTitle;
-}
-
-input,
-select,
-textarea{
-	padding: 16px 38px;
-	border: 1px solid $formsElColor;
-	background: $formsElColor;
-	border-radius: 40px;
-	font: 500 14px/16px $primaryFont;
-	color: #303234;
-	transition: border $fastSpeed linear;
-}
-
-input,
-select{
-	height: 50px;
-}
-
-input:not([type="submit"]),
-textarea{
-	&:focus{
-		border-color: $themeColor;
+	$validationMessage: '.validation-message';
+	$ajaxMessage:       '.ajax-respond';
+	$fMessage:          '.message';
+/* Common =================================================================== */
+	label{
+		display: inline-block;
+		cursor: pointer;
 	}
-}
-
-textarea{
-	height: 100px;
-	border-radius: 15px;
-	resize: none;
-}
-
-input[type="submit"]{
-	@extend %button;
-}
-
-#{$validation}{
-	font-size: 12px;
-	color: $errorColor;
-}
+	fieldset{
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+	input,
+	select,
+	textarea{
+		padding: 11px;
+		border: 1px solid #C3C3C3;
+		background: transparent;
+		font: 14px/20px $primaryFont;
+		transition:
+			border $fastSpeed linear,
+			box-shadow $fastSpeed linear;
+		&.validation-error{
+			border-color: $errorColor;
+			box-shadow: 0 0 10px $errorColor inset;
+			&::-webkit-input-placeholder{
+			 	color: $errorColor;
+			 	font-style: italic;
+			}
+			&::-moz-placeholder{
+			  color: $errorColor;
+			  font-style: italic;
+			}
+			&:-ms-input-placeholder{
+			  color: $errorColor;
+			  font-style: italic;
+			}
+		}
+	}
+	input:not([type="submit"]),
+	select{
+		height: 42px;
+	}
+	input:not([type="submit"]),
+	textarea{
+		&:focus{
+			border-color: $themeColor;
+			box-shadow: 0 0 0 rgba(#FFF,0) inset;
+			&::-webkit-input-placeholder{
+			 	color: transparent;
+			}
+			&::-moz-placeholder{
+			  color: transparent;
+			}
+			&:-ms-input-placeholder{
+			  color: transparent;
+			}
+		}
+	}
+	textarea{
+		height: 142px;
+		resize: none;
+	}
+	form{
+		position: relative;
+		em{
+			color: $errorColor;
+		}
+		.title{
+			width: 100%;
+			margin: 0 0 28px;
+			font-size: 24px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-align: center;
+			color: #535353;
+		}
+		#{$button}{
+			width: auto;
+			margin: 0 0 0 auto;
+		}
+	}
+	fieldset{
+		input,
+		select,
+		textarea{
+			margin: 0 0 15px;
+		}
+	}
+/* Validation =============================================================== */
+	#{$fMessage}{
+		display: block;
+		line-height: 1.1;
+		padding: 5px;
+		background: rgba($successColor,.2);
+		border: 1px solid $successColor;
+		color: $themeColor;
+		text-transform: uppercase;
+	}
+	#{$validationMessage}{
+		font-size: 10px;
+		margin: 0 0 10px;
+		background: rgba($errorColor,.2);
+		border-color: $errorColor;
+	}
+/* Ajax ===================================================================== */
+	form{
+		&::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: #FFF #{$preloaderImage} no-repeat center center / 50px 50px;
+			transition:
+				opacity $fastSpeed linear,
+				visibility $fastSpeed linear;
+			@extend %hidden;
+		}
+		&.loading{
+			&::before{
+				@extend %visible;
+			}
+		}
+	}
+	#{$ajaxMessage}{
+		margin: 15px 0 0;
+		text-align: center;
+		font-size: 14px;
+	}
+/* ========================================================================== */

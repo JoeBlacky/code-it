@@ -1,11 +1,11 @@
+	$gridView: '.grid-view';
+	$viewItem: '.view-item';
 /* ========================================================================== */
-	#{$mainNav}{
-		text-transform: uppercase;
-		letter-spacing: .1px;
-		text-align: center;
-		#{$navLink}{
-			font-size: 16px;
-			line-height: 1;
-		}
+	#{$gridView}{
+		align-items: stretch;
+		flex-flow: row wrap;
+	}
+	#{$viewItem}{
+		@include flex(0 1 33.3334%);
 	}
 /* ========================================================================== */

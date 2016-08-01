@@ -1,0 +1,32 @@
+	$pagination: '.pagination';
+/* ========================================================================== */
+	#{$pagination}{
+		justify-content: center;
+		margin: 16px 0 0;
+		font-size: 14px;
+		line-height: 22px;
+		.active{
+			font-size: 18px;
+			color: #444;
+			cursor: default;
+		}
+		.page{
+			padding: 0 10px;
+		}
+	}
+	#{$notHandheld}{
+		#{$pagination}{
+			a{
+				&:hover{
+					color: #444;
+				}
+			}
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $m){
+		#{$pagination}{
+			margin: 10px 0 0;
+		}
+	}
+/* ========================================================================== */

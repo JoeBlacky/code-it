@@ -1,0 +1,40 @@
+	$slides:    '.slides';
+	$slide:     '.slide';
+	$navDots:   '.nav-dots';
+	$navDot:    '.nav-dot';
+	$navArrows: '.nav-arrows';
+	$navArrow:  '.nav-arrow';
+/* Slider | Nav Dots ======================================================== */
+	$nDotWidth: 12px;
+	$nDotHeight: $nDotWidth;
+
+	#{$navDots}{
+		@include flexbox();
+		justify-content: center;
+	}
+	#{$navDot}{
+		width: $nDotWidth;
+		height: $nDotHeight;
+		margin: 0 4px;
+		background: rgba($themeColor, .25);
+		border-radius: 50%;
+		cursor: pointer;
+		transition: background $fastSpeed linear;
+		&.active{
+			background: #FFF;
+		}
+	}
+	#{$slide}{
+		display: none;
+		&:first-child{
+			display: block;
+		}
+	}
+	#{$notHandheld}{
+		#{$navDot}{
+			&:hover{
+				background: #FFF;
+			}
+		}
+	}
+/* ========================================================================== */

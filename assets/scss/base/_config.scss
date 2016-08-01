@@ -1,7 +1,7 @@
 /* Colors =================================================================== */
   $themeColor:           #282C37;
-  $formsElColor:         #F3F3F3;
-  $errorColor:           #DD4B39;
+  $errorColor:           #FF8383;
+  $successColor:         #77BE43;
   $textColor:            #767676;
 /* Fonts ==================================================================== */
   $primaryFont:         'Arimo',sans-serif;
@@ -15,7 +15,9 @@
 /* Images =================================================================== */
   $preloaderImage:      'url(../img/preloader.svg)';
 /* Icons ==================================================================== */
-/* Grid Variables =========================================================== */
+  $iTriangleRight:      '\E900';
+  $iCart:               '\E901';
+  $iMenu:               '\E902';
 /* Indents and Widths ======================================================= */
   $cu:                  20px;
   $mobileSpacing:       10px;
@@ -28,6 +30,10 @@
   $title:               '.title';
   $button:              '.btn';
   $sidebar:             '.sidebar';
+  $link:                '.link';
+/* Navigation =============================================================== */
+  $mainNav:             '.main-nav';
+  $navLink:             '.nav-link';
 /* Buttons Width ============================================================ */
   $bLarge:              270px;
   $bMedium:             240px;

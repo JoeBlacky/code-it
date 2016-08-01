@@ -8,9 +8,46 @@
 		padding-bottom: 21px;
 		.logo{
 			margin: 5px 0 0;
+			max-width: 200px;
 		}
 		.contact-info{
 			padding-right: 20px;
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $m){
+		.info-bar{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			.logo{
+				margin: 0;
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		.info-bar{
+			.contact-block{
+				width: 120px;
+				flex-flow: row wrap;
+				justify-content: flex-end;
+			}
+			.contact-info{
+				padding: 0;
+			}
+			#{$button}{
+				@include flex(0 1 100%)
+			}
+			.contact-link{
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		.info-bar{
+			.logo{
+				max-width: 150px;
+			}
 		}
 	}
 /* ========================================================================== */

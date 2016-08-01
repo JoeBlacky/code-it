@@ -1,0 +1,29 @@
+	$crumbs: '.breadcrumbs';
+	$crumb:  '.crumb';
+/* ========================================================================== */
+	#{$crumbs}{
+		justify-content: flex-start;
+		margin-top: 38px;
+		font-size: 14px;
+		line-height: 16px;
+		color: $themeColor;
+	}
+	#{$crumb}{
+		position: relative;
+		padding-right: 32px;
+		&::before{
+			content: $iTriangleRight;
+	    position: absolute;
+	    right: 8px;
+	    top: 0;
+	    font-family: $iconsFont;
+	    font-size: 12px;
+		}
+		&:last-child{
+			color: $textColor;
+			&::before{
+				display: none;
+			}
+		}
+	}
+/* ========================================================================== */

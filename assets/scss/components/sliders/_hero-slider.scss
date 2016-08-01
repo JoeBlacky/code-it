@@ -1,0 +1,29 @@
+	$heroSlider: '.hero-slider';
+/* ========================================================================== */
+	#{$heroSlider}{
+		position: relative;
+		#{$slide}{
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 537px;
+			top: 0;
+			left: 0;
+			background: no-repeat center center / cover;
+			transition:
+				opacity $fastSpeed linear,
+				visibility $fastSpeed linear;
+			@extend %hidden;
+			&.active{
+				position: relative;
+				@extend %visible;
+			}
+		}
+		#{$navDots}{
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			padding: (28px - $nDotHeight)/2 0;
+		}
+	}
+/* ========================================================================== */

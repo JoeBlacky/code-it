@@ -1,7 +1,7 @@
 	$siteHeader: '.header';
 /* Common =================================================================== */
 	body{
-		font: 400 16px/28px $primaryFont;
+		font: 400 14px/22px $primaryFont;
 		margin: 0;
 		color: $textColor;
 	}
@@ -19,11 +19,12 @@
 	.flex{
 		@include flexbox;
 	}
-	.page{
+	div.page{
 		min-height: 100vh;
 		min-width: $minWidth;
   	flex-direction: column;
   	align-items: stretch;
+  	overflow: hidden;
 	}
 	.mw{
 		width: 100%;
@@ -38,13 +39,26 @@
 	.contact-link{
 		display: block;
 		margin: 5px 0;
+		font-size: 16px;
 		line-height: 20px;
 		letter-spacing: .8px;
+	}
+	#{$link}{
+		@extend %link;
+	}
+	.i-cart{
+		cursor: pointer;
+		transition: color $fastSpeed linear;
 		&::before{
-			background: $textColor;
+			content: $iCart;
+			font-family: $iconsFont;
 		}
 	}
-	.link{
-		@extend %link;
+	#{$notHandheld}{
+		.i-cart{
+			&:hover{
+				color: $successColor;
+			}
+		}
 	}
 /* ========================================================================== */

@@ -1,0 +1,48 @@
+	$footer: '.footer';
+/* ========================================================================== */
+	#{$footer}{
+		align-items: flex-start;
+		margin-top: 82px;
+		padding-top: 44px;
+		padding-bottom: 44px;
+		border-top: 1px solid #EAEAEA;
+		font-size: 14px;
+		#{$mainNav}{
+			@include flex(0 1 659px);
+		}
+	}
+	.copy{
+		line-height: 20px;
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $m){
+		#{$footer}{
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 40px 0 0;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			#{$mainNav}{
+				margin: 0 0 20px;
+				@include flex(0 1 100%);
+			}
+			.copy{
+				order: 2;
+				br{
+					display: none;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $xs){
+		#{$footer}{
+			#{$mainNav}{
+				flex-wrap: wrap;
+				#{$navLink}{
+					margin: 0 0 10px;
+					@include flex(0 1 100%);
+				}
+			}
+		}
+	}
+/* ========================================================================== */

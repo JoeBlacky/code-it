@@ -12,7 +12,7 @@
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css" media="all" />
-	<script src="assets/js/main.js" defer></script>
+	<script src="assets/js/dev/main.js" defer></script>
 
 	<!--[if lt IE 9]>
 		<style>
@@ -33,18 +33,18 @@
 				<a href="/" class="logo">
 					<img src="assets/img/logo.png" alt="CodeIT Logo" width="200" height="47" />
 				</a>
-				<div class="flex">
+				<div class="flex contact-block">
 					<div class="contact-info">
 						<a href="tel:3050777777" class="link contact-link">+3 (050) 777 77 77</a>
 						<a href="tel:3050777777" class="link contact-link">+3 (050) 777 77 77</a>
 					</div>
-					<a href="#" class="btn">Feedback</a>
+					<a href="#feed-form" class="btn">Feedback</a>
 				</div>
 			</div>
 			<div class="header-nav">
 				<div class="mw">
-					<span class="handheld-nav"></span>
-					<ul class="flex main-nav">
+					<span class="handheld-nav" id="nav-trigger"></span>
+					<ul class="flex main-nav" id="header-nav">
 						<li class="nav-link">
 							<a href="#" class="link">Home</a>
 						</li>
@@ -65,9 +65,214 @@
 			</div>
 		</header>
 		<main class="content">
+			<div class="slider hero-slider">
+				<ul class="slides">
+					<li class="slide active" style="background-image: url(assets/img/hero-slider/1.jpg)"></li>
+					<li class="slide" style="background-image: url(assets/img/hero-slider/2.jpg)"></li>
+					<li class="slide" style="background-image: url(assets/img/hero-slider/3.jpg)"></li>
+				</ul>
+			</div>
+			<ul class="mw flex breadcrumbs">
+				<li class="crumb">
+					<a href="#" class="link">Home</a>
+				</li>
+				<li class="crumb">
+					<a href="#" class="link">Catalog</a>
+				</li>
+				<li class="crumb">
+					Category Name
+				</li>
+			</ul>
+			<div class="mw flex cols-2">
+				<aside class="col-1 sidebar">
+					<ul class="levels-list">
+						<li class="level-0">
+							<a href="#" class="link">Cars</a>
+						</li>
+						<li class="active level-0">
+							<a href="#" class="link">Household Appliances</a>
+							<ul>
+								<li class="level-1 active">
+									<a href="#" class="link">Microwaves</a>
+								</li>
+								<li class="level-1">
+									<a href="#" class="link">Fridges</a>
+								</li>
+								<li class="level-1">
+									<a href="#" class="link">Посудомоечные машины</a>
+								</li>
+								<li class="level-1">
+									<a href="#" class="link">Dishwashers</a>
+								</li>
+							</ul>
+						</li>
+						<li class="level-0">
+							<a href="#" class="link">Mobile Equipment</a>
+						</li>
+						<li class="level-0">
+							<a href="#" class="link">Computers</a>
+						</li>
+						<li class="level-0">
+							<a href="#" class="link">Clothing</a>
+						</li>
+						<li class="level-0">
+							<a href="#" class="link">Real Estate</a>
+						</li>
+					</ul>
+				</aside>
+				<div class="col-2">
+					<ul class="flex grid-view product-listing">
+						<li class="view-item">
+							<div class="product">
+								<a href="#">
+									<img src="assets/img/products/1.jpg" class="product-image" alt="" width="" height="" />
+									<h2 class="product-title">Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</h2>
+								</a>
+								<div class="flex product-info">
+									<p class="product-price">&#36; 550.95</p>
+									<span class="i-cart"></span>
+								</div>
+							</div>
+						</li>
+						<li class="view-item">
+							<div class="product">
+								<a href="#">
+									<img src="assets/img/products/1.jpg" class="product-image" alt="" width="" height="" />
+									<h2 class="product-title">Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</h2>
+								</a>
+								<div class="flex product-info">
+									<p class="product-price">&#36; 550.95</p>
+									<span class="i-cart"></span>
+								</div>
+							</div>
+						</li>
+						<li class="view-item">
+							<div class="product">
+								<a href="#">
+									<img src="assets/img/products/1.jpg" class="product-image" alt="" width="" height="" />
+									<h2 class="product-title">Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</h2>
+								</a>
+								<div class="flex product-info">
+									<p class="product-price">&#36; 550.95</p>
+									<span class="i-cart"></span>
+								</div>
+							</div>
+						</li>
+						<li class="view-item">
+							<div class="product">
+								<a href="#">
+									<img src="assets/img/products/1.jpg" class="product-image" alt="" width="" height="" />
+									<h2 class="product-title">Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</h2>
+								</a>
+								<div class="flex product-info">
+									<p class="product-price">&#36; 550.95</p>
+									<span class="i-cart"></span>
+								</div>
+							</div>
+						</li>
+						<li class="view-item">
+							<div class="product">
+								<a href="#">
+									<img src="assets/img/products/1.jpg" class="product-image" alt="" width="" height="" />
+									<h2 class="product-title">Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</h2>
+								</a>
+								<div class="flex product-info">
+									<p class="product-price">&#36; 550.95</p>
+									<span class="i-cart"></span>
+								</div>
+							</div>
+						</li>
+						<li class="view-item">
+							<div class="product">
+								<a href="#">
+									<img src="assets/img/products/1.jpg" class="product-image" alt="" width="" height="" />
+									<h2 class="product-title">Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</h2>
+								</a>
+								<div class="flex product-info">
+									<p class="product-price">&#36; 550.95</p>
+									<span class="i-cart"></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="flex pagination">
+						<li class="page">
+							<a href="#">1</a>
+						</li>
+						<li class="page">
+							<a href="#">2</a>
+						</li>
+						<li class="page active">
+							<span>3</span>
+						</li>
+						<li class="page">
+							<a href="#">4</a>
+						</li>
+						<li class="page">
+							<a href="#">5</a>
+						</li>
+						<li class="page">
+							<a href="#">6</a>
+						</li>
+						<li class="page">
+							<a href="#">7</a>
+						</li>
+					</ul>
+					<div class="cols-2 flex equal-cols category-outro">
+						<div class="col-1">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+						</div>
+						<div class="col-2">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
-		<footer class="footer">
+		<footer class="mw flex footer">
+			<div class="copy">
+				&copy; CodeIT 2012-2013,<br>
+				All Rights Reserved.
+			</div>
+			<ul class="flex main-nav">
+				<li class="nav-link">
+					<a href="#" class="link">Home</a>
+				</li>
+				<li class="nav-link">
+					<a href="#" class="link">Catalog</a>
+				</li>
+				<li class="nav-link">
+					<a href="#" class="link">Shipping and payment</a>
+				</li>
+				<li class="nav-link">
+					<a href="#" class="link">Price</a>
+				</li>
+				<li class="nav-link">
+					<a href="#" class="link">Contacts</a>
+				</li>
+			</ul>
 		</footer>
+	</div>
+	<div class="flex pop-up">
+		<div class="content-outer">
+			<div class="content">
+				<a href="#" class="i-close">&times;</a>
+				<form class="" id="feed-form" method="POST" action="forms.php">
+					<legend class="title">Feedback</legend>
+					<fieldset>
+						<label for="ff-name">Name<em>*</em></label>
+					  <input class="required" type="text" id="ff-name" name="name" required />
+					  <label for="ff-phone">Phone<em>*</em></label>
+					  <input class="required" type="tel" id="ff-phone" name="phone" required />
+					  <label for="ff-email">Email<em>*</em></label>
+					  <input class="required" type="email" id="ff-email" name="email" required />
+					  <label for="ff-message">Text</label>
+					  <textarea id="ff-message" name="message"></textarea>
+					</fieldset>
+					<input type="submit" class="btn btn-large" value="Submit" />
+				</form>
+			</div>
+		</div>
 	</div>
 	<table class="zombie">
 		<tr>

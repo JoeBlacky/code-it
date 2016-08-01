@@ -1,0 +1,56 @@
+	$levelsList: '.levels-list';
+	$topLevel:   '.level-0';
+	$subLevel:   '.level-1';
+/* ========================================================================== */
+	#{$levelsList}{
+		ul{
+			padding-left: 15px;
+		}
+		#{$topLevel}{
+			margin: 0 0 11px;
+			font-size: 16px;
+			&.active{
+				margin-bottom: 21px;
+				> #{$link}{
+					margin: 0 0 16px;
+					color: $themeColor;
+				}
+			}
+		}
+		#{$subLevel}{
+			margin: 0 0 6px;
+			font-size: 14px;
+			&.active{
+				color: #010101;
+				#{$link}{
+					&::after{
+						transform: scale(1);
+					}
+				}
+			}
+			a{
+				&::before{
+					content: '';
+					position: absolute;
+					width: 4px;
+					height: 4px;
+					background: $textColor;
+					border-radius: 50%;
+					top: 5px;
+					left: -8px;
+				}
+			}
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $s){
+		#{$levelsList}{
+			flex-wrap: wrap;
+			align-items: flex-start;
+			@include flexbox();
+			#{$topLevel}{
+				@include flex(0 1 25%);
+			}
+		}
+	}
+/* ========================================================================== */
