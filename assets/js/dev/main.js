@@ -22,6 +22,26 @@ app.Nav = {
 	},
 }
 
+app.Triggers = {
+	activeTrigger: 'active-trigger',
+
+	init: function(){
+		this.activeTriggers();
+	},
+	activeTriggers: function(){
+		var trigger = document.getElementsByClassName(this.activeTrigger);
+
+		for (i = 0; i < trigger.length; i++) {
+			trigger[i].addEventListener('click', function(){
+				var target = document.getElementById(this.dataset.active);
+
+				target.classList.toggle('active');
+				this.classList.toggle('active');
+			});
+		}
+	}
+}
+
 app.Slider = {
 	slider:  'slider',
 	navDots: 'nav-dots',
@@ -308,6 +328,7 @@ app.Form = {
 
 window.onload = (function(){
 	app.Nav.init();
+	app.Triggers.init();
 	app.Slider.init();
 	app.Form.init()
 });

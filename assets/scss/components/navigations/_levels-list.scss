@@ -39,15 +39,4 @@
 			}
 		}
 	}
-/* Media Queries ============================================================ */
-	@media screen and (max-width: $s){
-		#{$levelsList}{
-			flex-wrap: wrap;
-			align-items: flex-start;
-			@include flexbox();
-			#{$topLevel}{
-				@include flex(0 1 25%);
-			}
-		}
-	}
 /* ========================================================================== */

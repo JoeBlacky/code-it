@@ -2,13 +2,15 @@ $cols2:     '.cols-2';
 $col-1:     '.col-1';
 $col-2:     '.col-2';
 $equalCols: '.equal-cols';
+$sidebarW:  $mainWidth - 770px;
 /* ========================================================================== */
 	#{$cols2}{
 		margin-top: 32px;
 		align-items: flex-start;
 		#{$col-1}{
 			padding-right: 20px;
-			@include flex(0 1 $mainWidth - 770px);
+			padding-bottom: 20px;
+			@include flex(0 1 $sidebarW);
 		}
 		#{$col-2}{
 			@include flex(0 1 770px);
@@ -23,9 +25,33 @@ $equalCols: '.equal-cols';
 	}
 /* Media Queries ============================================================ */
 	@media screen and (max-width: $s){
+		#{$sidebarTrigger}{
+			display: block;
+			width: 40px;
+			height: 40px;
+			margin: 0 0 20px;
+			border: 1px solid;
+			color: $textColor;
+			text-align: center;
+			border-radius: 2px;
+			&::before{
+				content: $iDots;
+				font: 24px/40px $iconsFont;
+			}
+			&.active{
+				color: $themeColor;
+			}
+		}
 		#{$cols2}{
 			flex-wrap: wrap;
-			#{$col-1},
+			#{$sidebar}{
+				max-height: 60px;
+				overflow: hidden;
+				transition: max-height $fastSpeed linear;
+				&.active{
+					max-height: 1000px;
+				}
+			}
 			#{$col-2}{
 				@include flex(0 1 100%);
 			}
