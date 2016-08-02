@@ -26,9 +26,13 @@
 		display: none;
 		width: 50px;
 		text-align: center;
+		transition: background $fastSpeed linear;
 		&::before{
 			content: $iMenu;
 			font: 20px/50px $iconsFont;
+		}
+		&.active{
+			background: $textColor;
 		}
 	}
 /* Media Queries ============================================================ */
@@ -39,17 +43,21 @@
 		}
 		#{$headerNav}{
 			padding: 0;
+			.mw{
+				padding-right: 0;
+			}
 			#{$mainNav}{
 				flex-flow: row wrap;
 				position: absolute;
 				max-width: $minWidth;
 				top: 100%;
 				right: 0;
-				padding: 0 0 20px;
-				background: $themeColor;
+				padding: $mobileSpacing 0;
+				background: $textColor;
 				text-align: right;
 				transition: transform $fastSpeed linear;
 				transform: translate(100%,0);
+				z-index: 1;
 				&.active{
 					transform: translate(0,0);
 				}

@@ -630,10 +630,13 @@ div.page {
 .handheld-nav {
   display: none;
   width: 50px;
-  text-align: center; }
+  text-align: center;
+  transition: background 0.2s linear; }
   .handheld-nav::before {
     content: "";
     font: 20px/50px "Icomoon", sans; }
+  .handheld-nav.active {
+    background: #767676; }
 
 /* Media Queries ============================================================ */
 @media screen and (max-width: 900px) {
@@ -643,17 +646,20 @@ div.page {
 
   .header-nav {
     padding: 0; }
+    .header-nav .mw {
+      padding-right: 0; }
     .header-nav .main-nav {
       flex-flow: row wrap;
       position: absolute;
       max-width: 320px;
       top: 100%;
       right: 0;
-      padding: 0 0 20px;
-      background: #282C37;
+      padding: 10px 0;
+      background: #767676;
       text-align: right;
       transition: transform 0.2s linear;
-      transform: translate(100%, 0); }
+      transform: translate(100%, 0);
+      z-index: 1; }
       .header-nav .main-nav.active {
         transform: translate(0, 0); }
     .header-nav .nav-link {

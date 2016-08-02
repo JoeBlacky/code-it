@@ -8,20 +8,6 @@ function insertAfter(el, referenceNode) {
 
 var app = {};
 
-app.Nav = {
-	init: function(){
-		this.mobileNav()
-	},
-	mobileNav: function(){
-		var trigger = document.getElementById("nav-trigger");
-		var nav = document.getElementById("header-nav");
-
-		trigger.addEventListener('click', function(){
-    	nav.classList.toggle('active');
-    });
-	},
-}
-
 app.Triggers = {
 	activeTrigger: 'active-trigger',
 
@@ -32,11 +18,13 @@ app.Triggers = {
 		var trigger = document.getElementsByClassName(this.activeTrigger);
 
 		for (i = 0; i < trigger.length; i++) {
-			trigger[i].addEventListener('click', function(){
+			trigger[i].addEventListener('click', function(e){
 				var target = document.getElementById(this.dataset.active);
 
 				target.classList.toggle('active');
 				this.classList.toggle('active');
+
+				e.preventDefault();
 			});
 		}
 	}
@@ -159,11 +147,9 @@ app.Form = {
 			submitBtn[i].addEventListener('click', function(e){
 				form = this.parentElement;
 
-				/*if (app.Form.validate(form)) {
+				if (app.Form.validate(form)) {
 					app.Form.sendRequest(form);
-				}*/
-
-				app.Form.sendRequest(form);
+				}
 
 				e.preventDefault();
 			});
@@ -327,7 +313,6 @@ app.Form = {
 }
 
 window.onload = (function(){
-	app.Nav.init();
 	app.Triggers.init();
 	app.Slider.init();
 	app.Form.init()
