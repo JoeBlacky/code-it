@@ -38,7 +38,7 @@
 						<a href="tel:3050777777" class="link contact-link">+3 (050) 777 77 77</a>
 						<a href="tel:3050777777" class="link contact-link">+3 (050) 777 77 77</a>
 					</div>
-					<a href="#feed-form" class="btn">Feedback</a>
+					<a href="#feed-form-popup" data-active="feed-form-popup" class="active-trigger btn">Feedback</a>
 				</div>
 			</div>
 			<div class="header-nav">
@@ -255,10 +255,10 @@
 			</ul>
 		</footer>
 	</div>
-	<div class="flex pop-up">
+	<div class="flex pop-up" id="feed-form-popup">
 		<div class="content-outer">
 			<div class="content">
-				<a href="#" class="i-close">&times;</a>
+				<a href="#" class="active-trigger i-close" data-active="feed-form-popup">&times;</a>
 				<form class="" id="feed-form" method="POST" action="forms.php">
 					<legend class="title">Feedback</legend>
 					<fieldset>

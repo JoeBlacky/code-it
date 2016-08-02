@@ -17,6 +17,9 @@
 		&.active,
 		&:target{
 			@extend %visible;
+			.content{
+				transform: scale(1);
+			}
 		}
 		.content{
 			position: relative;
@@ -24,6 +27,8 @@
 			margin: 0 auto;
 			padding: 33px 62px 26px 63px;
 			background: $ppContentColor;
+			transition: transform $fastSpeed linear;
+			transform: scale(.5);
 			&-outer{
 				width: 100%;
 				max-height: 100%;
@@ -48,6 +53,23 @@
 		.i-close{
 			&:hover{
 				color: $errorColor;
+			}
+		}
+	}
+/* ========================================================================== */
+	@media screen and (max-width: $m){
+		#{$popUp}{
+			.content{
+				padding: 20px 30px;
+				&-outer{
+					padding: $mobileSpacing*2;
+				}
+			}
+			.i-close{
+				bottom: auto;
+				left: auto;
+				top: 10px;
+				right: 10px;
 			}
 		}
 	}
