@@ -33,6 +33,10 @@ input, select, textarea, hr, button {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden; }
 
+body,
+html {
+  height: 100%; }
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
@@ -363,9 +367,6 @@ div.page {
   padding-left: 10px;
   padding-right: 10px; }
 
-.zombie {
-  display: none; }
-
 .contact-link {
   display: block;
   margin: 5px 0;
@@ -379,6 +380,16 @@ div.page {
   .i-cart::before {
     content: "";
     font-family: "Icomoon", sans; }
+
+.zombie {
+  display: none;
+  height: 100%;
+  text-align: center; }
+  .zombie td {
+    padding: 0 20px;
+    vertical-align: middle; }
+  .zombie cite {
+    display: block; }
 
 .not-handheld .i-cart:hover {
   color: #77BE43; }

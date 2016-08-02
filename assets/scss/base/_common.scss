@@ -34,9 +34,6 @@
 		padding-left: $mobileSpacing;
 		padding-right: $mobileSpacing;
 	}
-	.zombie{
-		display: none;
-	}
 	.contact-link{
 		display: block;
 		margin: 5px 0;
@@ -53,6 +50,18 @@
 		&::before{
 			content: $iCart;
 			font-family: $iconsFont;
+		}
+	}
+	.zombie{
+		display: none;
+		height: 100%;
+		text-align: center;
+		td{
+			padding: 0 20px;
+			vertical-align: middle;
+		}
+		cite{
+			display: block;
 		}
 	}
 	#{$notHandheld}{
