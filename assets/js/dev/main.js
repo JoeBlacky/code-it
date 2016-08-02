@@ -2,6 +2,9 @@ var app = {
 	notHandheld: 'not-handheld',
 	init: function(){
 		this.detectHandheld();
+		app.Triggers.init();
+		app.Slider.init();
+		app.Form.init()
 	},
 	detectHandheld: function(){
 		if(app.isMobile.any()) {
@@ -343,7 +346,4 @@ app.Form = {
 
 window.onload = (function(){
 	app.init();
-	app.Triggers.init();
-	app.Slider.init();
-	app.Form.init()
 });
