@@ -11,7 +11,7 @@ var app = {
 		this.detectHandheld();
 	},
 	detectHandheld: function(){
-		if(isMobile.any()) {
+		if(app.isMobile.any()) {
       alert('Alarma');
     }
 	}
@@ -34,7 +34,7 @@ app.isMobile = {
     return navigator.userAgent.match(/IEMobile/i);
 	},
 	any: function() {
-    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    return (app.isMobile.Android() || app.isMobile.BlackBerry() || app.isMobile.iOS() || app.isMobile.Opera() || app.isMobile.Windows());
 	}
 }
 
