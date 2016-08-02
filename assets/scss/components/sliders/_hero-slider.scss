@@ -27,3 +27,25 @@
 		}
 	}
 /* ========================================================================== */
+	@media screen and (max-width: $m){
+		#{$heroSlider}{
+			#{$slide}{
+				height: 400px;
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$heroSlider}{
+			#{$slide}{
+				height: 300px;
+			}
+		}
+	}
+	@media screen and (max-width: $xs){
+		#{$heroSlider}{
+			#{$slide}{
+				height: 200px;
+			}
+		}
+	}
+/* ========================================================================== */

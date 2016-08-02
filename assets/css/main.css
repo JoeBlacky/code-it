@@ -750,6 +750,16 @@ div.page {
     padding: 8px 0; }
 
 /* ========================================================================== */
+@media screen and (max-width: 900px) {
+  .hero-slider .slide {
+    height: 400px; } }
+@media screen and (max-width: 700px) {
+  .hero-slider .slide {
+    height: 300px; } }
+@media screen and (max-width: 500px) {
+  .hero-slider .slide {
+    height: 200px; } }
+/* ========================================================================== */
 /* ========================================================================== */
 .breadcrumbs {
   justify-content: flex-start;
