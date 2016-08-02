@@ -6,7 +6,37 @@ function insertAfter(el, referenceNode) {
   referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
 }
 
-var app = {};
+var app = {
+	init: function(){
+		this.detectHandheld();
+	},
+	detectHandheld: function(){
+		if(isMobile.any()) {
+      alert('Alarma');
+    }
+	}
+};
+
+app.isMobile = {
+	Android: function() {
+    return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry: function() {
+    return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS: function() {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function() {
+    return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows: function() {
+    return navigator.userAgent.match(/IEMobile/i);
+	},
+	any: function() {
+    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+}
 
 app.Triggers = {
 	activeTrigger: 'active-trigger',
@@ -313,6 +343,7 @@ app.Form = {
 }
 
 window.onload = (function(){
+	app.init();
 	app.Triggers.init();
 	app.Slider.init();
 	app.Form.init()
