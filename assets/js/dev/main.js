@@ -14,7 +14,7 @@ var app = {
 	hasClass: function(element, cls){
 		return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 	},
-	insertAfter: function(){
+	insertAfter: function(el, referenceNode){
 		referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
 	}
 };
