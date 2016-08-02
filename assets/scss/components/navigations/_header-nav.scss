@@ -16,11 +16,6 @@
 				border: 0;
 			}
 		}
-		#{$link}{
-			&::after{
-				background: #FFF;
-			}
-		}
 	}
 	#{$handheldNav}{
 		display: none;

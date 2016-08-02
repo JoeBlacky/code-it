@@ -161,8 +161,7 @@ form.loading::before, .pop-up.active, .pop-up:target, .hero-slider .slide.active
     left: 0;
     top: 100%;
     width: 100%;
-    height: 1px;
-    background: #282C37;
+    border-bottom: 1px solid;
     transition: transform 0.2s linear;
     transform: scale(0); }
 
@@ -646,8 +645,6 @@ div.page {
     padding: 0 4.489795918367347%; }
     .header-nav .nav-link:first-child {
       border: 0; }
-  .header-nav .link::after {
-    background: #FFF; }
 
 .handheld-nav {
   display: none;
