@@ -18,6 +18,8 @@
   $iTriangleRight:      '\E900';
   $iCart:               '\E901';
   $iMenu:               '\E902';
+/* Icons | Local ============================================================ */
+  $local-iExcel:        '../img/svg/file-excel.svg';
 /* Indents and Widths ======================================================= */
   $cu:                  20px;
   $mobileSpacing:       10px;
@@ -34,6 +36,10 @@
 /* Navigation =============================================================== */
   $mainNav:             '.main-nav';
   $navLink:             '.nav-link';
+/* Navigation | Levels list ================================================= */
+  $levelsList:          '.levels-list';
+  $topLevel:            '.level-0';
+  $subLevel:            '.level-1';
 /* Buttons Width ============================================================ */
   $bLarge:              270px;
   $bMedium:             240px;

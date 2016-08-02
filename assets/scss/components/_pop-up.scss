@@ -13,7 +13,7 @@
 		transition:
 			opacity $fastSpeed linear,
 			visibility $fastSpeed linear;
-		//@extend %hidden;
+		@extend %hidden;
 		&.active,
 		&:target{
 			@extend %visible;

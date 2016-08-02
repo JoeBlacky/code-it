@@ -139,9 +139,11 @@ app.Form = {
 			submitBtn[i].addEventListener('click', function(e){
 				form = this.parentElement;
 
-				if (app.Form.validate(form)) {
+				/*if (app.Form.validate(form)) {
 					app.Form.sendRequest(form);
-				}
+				}*/
+
+				app.Form.sendRequest(form);
 
 				e.preventDefault();
 			});
@@ -283,7 +285,6 @@ app.Form = {
 
 		var xhr = new XMLHttpRequest();
 		var data = app.Form.prepareData(form);
-		console.log(data);
 
     xhr.onreadystatechange = function() {
       if (xhr.readyState == XMLHttpRequest.DONE ) {
