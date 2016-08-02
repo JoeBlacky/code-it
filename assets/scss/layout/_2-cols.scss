@@ -24,6 +24,11 @@ $sidebarW:  $mainWidth - 770px;
 		}
 	}
 /* Media Queries ============================================================ */
+	@media screen and (max-width: $m){
+		#{$cols2}{
+			margin-top: $mobileSpacing*2;
+		}
+	}
 	@media screen and (max-width: $s){
 		#{$sidebarTrigger}{
 			display: block;

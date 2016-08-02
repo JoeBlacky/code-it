@@ -509,6 +509,9 @@ div.page {
   flex: 0 1 auto; }
 
 /* Media Queries ============================================================ */
+@media screen and (max-width: 900px) {
+  .cols-2 {
+    margin-top: 20px; } }
 @media screen and (max-width: 700px) {
   .sidebar-trigger {
     display: block;
@@ -789,6 +792,10 @@ div.page {
     .crumb:last-child::before {
       display: none; }
 
+/* ========================================================================== */
+@media screen and (max-width: 900px) {
+  .breadcrumbs {
+    margin-top: 20px; } }
 /* ========================================================================== */
 /* ========================================================================== */
 .grid-view {
