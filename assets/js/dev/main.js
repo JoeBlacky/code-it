@@ -1,13 +1,5 @@
-function hasClass(element, cls) {
-  return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-}
-
-function insertAfter(el, referenceNode) {
-  referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
-}
-
 var app = {
-	notHandheld: 'not-handheld';
+	notHandheld: 'not-handheld',
 	init: function(){
 		this.detectHandheld();
 	},
@@ -15,6 +7,12 @@ var app = {
 		if(app.isMobile.any()) {
        document.body.classList.remove(this.notHandheld);
     }
+	},
+	hasClass: function(element, cls){
+		return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+	},
+	insertAfter: function(){
+		referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
 	}
 };
 
@@ -110,7 +108,7 @@ app.Slider = {
 
 		for (i = 0; i < dots.length ; i++) {
 			dots[i].addEventListener('click', function(){
-	    	if(!hasClass(this, 'active')){;
+	    	if(!app.hasClass(this, 'active')){;
 	    		app.Slider.switchSlide(this);
 	    		app.Slider.changeDot(this);
 	    		this.classList.add('active');
@@ -270,7 +268,7 @@ app.Form = {
 		container.setAttribute('for', fieldID);
 		container.classList.add(this.validMessage);
 
-		insertAfter(container, element)
+		app.insertAfter(container, element)
 	},
 	removeErrorContainer: function(field){
 		this.messageAdded = false;
