@@ -7,12 +7,13 @@ function insertAfter(el, referenceNode) {
 }
 
 var app = {
+	notHandheld: 'not-handheld';
 	init: function(){
 		this.detectHandheld();
 	},
 	detectHandheld: function(){
 		if(app.isMobile.any()) {
-      alert('Alarma');
+       document.body.classList.remove(this.notHandheld);
     }
 	}
 };
