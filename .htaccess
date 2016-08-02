@@ -53,3 +53,8 @@
     ExpiresDefault "access plus 1 year"
 </IfModule>
 ## EXPIRES CACHING ##
+
+## By default allow all access
+
+    Order allow,deny
+    Allow from all
